@@ -9,7 +9,7 @@ The lyrics themselves were originally written by the various song artists/songwr
 English only.
 
 ## Collection process
-The dataset contains 362,237 songs from 18,231 artists with six columns for each song: song index, title, year released, artist, genre, and lyrics. All songs in the database were released between 1968 and 2016, excluding several songs incorrectly labeled with invalid years. It was created by scraping lyrics from MetroLyrics, which builds its database through user submissions and contributions.
+The dataset contains 218 210 songs from 10,431 artists with six columns for each song: song index, title, year released, artist, genre, and lyrics. All songs in the database were released between 1968 and 2016, excluding several songs incorrectly labeled with invalid years. It was created by scraping lyrics from MetroLyrics, which builds its database through user submissions and contributions.
 
 ## Annotation process
 The only information we have about the annotators is that they are user of MetroLyrics.

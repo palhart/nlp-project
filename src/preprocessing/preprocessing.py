@@ -60,6 +60,17 @@ def adjust_genre_distribution(df):
     df = df.drop(index=set(rocks_indices) - set(keep_indices))
     return df
 
+def split_years(df):
+    bins = [1968, 1980, 1992, 2004, 2016]
+    labels  = ['1968-1980', '1980-1992', '1992-2004', '2004-2016']
+
+    df['interval'] = pd.cut(df['year'], bins=bins, labels=labels, right=True)
+    df1 = df[df['interval'] == '1968-1980'].copy().drop(columns='interval')
+    df2 = df[df['interval'] == '1980-1992'].copy().drop(columns='interval')
+    df3 = df[df['interval'] == '1992-2004'].copy().drop(columns='interval')
+    df4 = df[df['interval'] == '2004-2016'].copy().drop(columns='interval')
+
+    return df1, df2, df3, df4
 
 # Encoding choices: ["r50k_base", "p50k_base", "cl100k_base", "gpt-4"]
 def tokenize_bpe(text, encoding_name="gpt-4"):
